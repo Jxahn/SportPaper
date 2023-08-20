@@ -1470,7 +1470,7 @@ public class PlayerConnection implements PacketListenerPlayIn, IUpdatePlayerList
             /*if (!flag) {
                 d0 = 9.0D;
             }*/
-            //Use default lineOfSight value
+            //Use default vanilla lignOfSight method
 
             if (this.player.h(entity) < d0) {
                 ItemStack itemInHand = this.player.inventory.getItemInHand(); // CraftBukkit
