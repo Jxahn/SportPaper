@@ -21,8 +21,7 @@ public class KnockbackModificationCommand extends Command {
                                         double knockbackVertical, double knockbackRangeFactor, double knockbackMaxRangeReduction, double knockbackStartRange, double knockbackIdleReduction) {
         super(name);
         this.description = "Modify the knockback configuration";
-        this.usageMessage = "/knockback " +
-                "<horizontal|vertical|rangefactor|maxrangereduction|startrange|idlereduction|show> <value>";
+        this.usageMessage = "<horizontal multiplier> <vertical multiplier> <range factor> <max range reduction> <start range> <idle reduction>";
         this.setPermission("bukkit.command.knockback");
         this.knockbackHorizontal = knockbackHorizontal;
         this.knockbackVertical = knockbackVertical;
@@ -38,7 +37,8 @@ public class KnockbackModificationCommand extends Command {
             return true;
         }
         if (args.length < 1) {
-            sender.sendMessage(ChatColor.RED + "Usage: " + usageMessage);
+            sender.sendMessage(ChatColor.WHITE + usageMessage);
+            sender.sendMessage(ChatColor.YELLOW + "Current knockback values: " + ChatColor.LIGHT_PURPLE + PaperSpigotConfig.knockbackHorizontal + ChatColor.YELLOW + ", " + ChatColor.LIGHT_PURPLE + PaperSpigotConfig.knockbackVertical + ChatColor.YELLOW + ", " + ChatColor.LIGHT_PURPLE + PaperSpigotConfig.knockbackRangeFactor + ChatColor.YELLOW + ", " + ChatColor.LIGHT_PURPLE + PaperSpigotConfig.knockbackMaxRangeReduction + ChatColor.YELLOW + ", " + ChatColor.LIGHT_PURPLE + PaperSpigotConfig.knockbackStartRange + ChatColor.YELLOW + " and " + ChatColor.LIGHT_PURPLE + PaperSpigotConfig.knockbackIdleReduction + ChatColor.YELLOW + ".");
             return true;
         }
 
