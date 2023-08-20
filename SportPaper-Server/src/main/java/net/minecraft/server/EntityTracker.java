@@ -44,7 +44,7 @@ public class EntityTracker {
         } else if (entity instanceof EntityFireball) {
             this.addEntity(entity, 64, 10, false);
         } else if (entity instanceof EntitySnowball) {
-            this.addEntity(entity, 64, 10, true);
+            this.addEntity(entity, 64, Integer.MAX_VALUE, true);
         } else if (entity instanceof EntityEnderPearl) {
             this.addEntity(entity, 64, Integer.MAX_VALUE, true);
         } else if (entity instanceof EntityEnderSignal) {
