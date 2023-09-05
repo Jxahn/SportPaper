@@ -1,2 +1,2 @@
-# XePaper
-XePaper is fork of SportPaper without gradle usage.
+# Project discontinued.
+will be right back within 1y
